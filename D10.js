@@ -446,6 +446,12 @@ searchByTitle("The");
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+const searchAndDivide = (string, array = movies) => {
+  arrFilm = [];
+  arrFilm.push(array.filter((movie) => movies, Title.includes(string)));
+  arrFilm.push(array.filter((movie) => !movies, Title.includes(string)));
+  return arrFilm;
+};
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
