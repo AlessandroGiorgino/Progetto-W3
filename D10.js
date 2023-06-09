@@ -547,16 +547,19 @@ const TrsClassAdd = function () {
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
-const isItPrime = function (num) {
-  let primo = num != 1;
-  for (let i = 2; i < num; i++) {
-    if (num % i == 0) {
-      primo = false;
-      break;
+const isItPrime = function (numero) {
+  if (numero === 1) {
+    return false;
+  } else if (numero === 2) {
+    return true;
+  } else {
+    for (let i = 2; i < numero; i++) {
+      if (numero % i === 0) {
+        return false;
+      }
     }
+    return true;
   }
-  return primo;
 };
-isItPrime(889);
 
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
+console.log(isItPrime(999));
